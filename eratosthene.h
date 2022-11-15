@@ -12,4 +12,33 @@
 #ifndef LABO_CRIBLE_ERATOTSTHENE_ERATOSTHENE_H
 #define LABO_CRIBLE_ERATOTSTHENE_ERATOSTHENE_H
 
+#include <vector>
+
+/**
+ *
+ * @brief genere le tableau crible d erastothene
+ * @param taille
+ * @return tableau crible eratosthene
+ */
+
+std::vector<bool> eratosthene(size_t taille);
+
+
+/**
+ *
+ * @brief genere une liste des nombres premiers
+ * @param tableauCrible
+ * @return vecteur nb premier
+ */
+std::vector<int> listeNbPremier(std::vector<bool> tableauCrible);
+
+
+/**
+ *
+ * @brief affiche le tableau crible
+ * @name afficherTableauCrible
+ * @param tableauCrible (entrant)
+ */
+void afficherTableauCrible(std::vector<bool> tableauCrible);
+
 #endif //LABO_CRIBLE_ERATOTSTHENE_ERATOSTHENE_H

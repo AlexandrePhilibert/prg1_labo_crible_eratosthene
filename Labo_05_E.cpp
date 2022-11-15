@@ -13,7 +13,9 @@
 #include <cstdlib>
 #include <limits>
 #include <string>
+#include <vector>
 #include "saisie.h"
+#include "eratosthene.h"
 
 using namespace std;
 
@@ -25,11 +27,28 @@ int main() {
 
    int nombreValeurs;
 
+   // TODO: Message bienvenue
+
    nombreValeurs = saisie(
       MSG_SAISIE,
       MSG_ERREUR,
       NOMBRE_VALEURS_MIN,
       NOMBRE_VALEURS_MAX);
+
+   vector<bool> tableauCrible = eratosthene(nombreValeurs);
+   vector<int> listeNombrePremiers = listeNbPremier(tableauCrible);
+
+   cout << "criblage du tableau" << endl;
+   afficherTableauCrible(tableauCrible);
+   cout << endl;
+
+   // Affiche la liste des nombres premiers
+   cout << "liste des nbres 1er" << endl;
+   for (int nombre : listeNombrePremiers) {
+      cout << nombre << " ";
+   }
+   cout << endl << endl;
+
 
    cout << "Pressez ENTER pour quitter";
    cin.ignore(numeric_limits<streamsize>::max(), '\n');

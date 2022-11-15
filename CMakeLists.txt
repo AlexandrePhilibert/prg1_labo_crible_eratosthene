@@ -3,4 +3,4 @@ project(labo_crible_eratotsthene)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(labo_crible_eratotsthene Labo_05_E.cpp saisie.cpp saisie.h cmake-build-debug/eratosthene.cpp eratosthene.cpp eratosthene.h)
+add_executable(labo_crible_eratotsthene Labo_05_E.cpp saisie.cpp saisie.h eratosthene.cpp eratosthene.h)
