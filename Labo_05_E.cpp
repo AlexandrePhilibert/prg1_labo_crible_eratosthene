@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------------------------
 // Fichier        : Labo_05_E.cpp
 // Auteur(s)      : Sonnard Nicolas & Philibert Alexandre
-// Date           : 2022-11-15
+// Date           : 2022-11-16
 // But            :
 // Modifications  : NIL
 // Remarque(s)    :
@@ -16,6 +16,7 @@
 #include <vector>
 #include "saisie.h"
 #include "eratosthene.h"
+#include "affichage.h"
 
 using namespace std;
 
@@ -24,10 +25,14 @@ int main() {
    const string MSG_ERREUR = "/!\\ erreur de saisie ...";
    const int NOMBRE_VALEURS_MIN = 2;
    const int NOMBRE_VALEURS_MAX = 100;
+   const int NOMBRE_COLONNES_TABLEAU = 10;
 
+   /**
+    * Le nombre de valeurs à considérer pour le calcul des nombres premiers
+    */
    int nombreValeurs;
 
-   // TODO: Message bienvenue
+   cout << "Ce programme utilise la méthode du crible d'Ératosthène pour calculer les nombres premiers." << endl;
 
    nombreValeurs = saisie(
       MSG_SAISIE,
@@ -36,23 +41,20 @@ int main() {
       NOMBRE_VALEURS_MAX);
 
    vector<bool> tableauCrible = eratosthene(nombreValeurs);
-   vector<int> listeNombrePremiers = listeNbPremier(tableauCrible);
+   vector<int> nombresPremiers = listeNombresPremiers(tableauCrible);
 
+   // Affiche le tableau criblé d'Ératosthène
    cout << "criblage du tableau" << endl;
-   afficherTableauCrible(tableauCrible);
+   afficher(tableauCrible, NOMBRE_COLONNES_TABLEAU);
    cout << endl;
 
    // Affiche la liste des nombres premiers
    cout << "liste des nbres 1er" << endl;
-   for (int nombre : listeNombrePremiers) {
-      cout << nombre << " ";
-   }
+   afficher(nombresPremiers, NOMBRE_COLONNES_TABLEAU);
    cout << endl << endl;
-
 
    cout << "Pressez ENTER pour quitter";
    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
    return EXIT_SUCCESS;
-
 }
