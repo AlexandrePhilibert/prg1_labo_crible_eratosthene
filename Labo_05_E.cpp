@@ -35,7 +35,7 @@ int main() {
    int nombreValeurs;
 
    cout << "Ce programme utilise la méthode du crible d'Ératosthène "
-           "pour calculer les nombres premiers."
+        << "pour calculer les nombres premiers."
         << endl;
 
    nombreValeurs = saisie(

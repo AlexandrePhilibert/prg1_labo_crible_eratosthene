@@ -2,7 +2,7 @@
 // Fichier        : eratosthene.cpp
 // Auteur(s)      : Sonnard Nicolas & Philibert Alexandre
 // Date           : 2022-11-16
-// But            : Fonctions responsables pour le calcule de la crible erathosthene
+// But            : Fonctions responsables pour le calcul du crible d'Ératosthène.
 // Modifications  : NIL
 // Remarque(s)    :
 // Compilateur    : g++ 11.2.0
@@ -34,7 +34,7 @@ vector<bool> eratosthene(size_t taille) {
    tableauCrible.at(0) = false;
    tableauCrible.at(1) = false;
 
-   // Débute la boucle à 3,
+   // Débute la boucle à 3, les nombres inférieurs ayant été traitées
    for (size_t i = 3; i * i <= taille; ++i) {
       if (tableauCrible.at(i)) {
          // Les multiples de i inférieurs à i*i ont déjà été gérés.
