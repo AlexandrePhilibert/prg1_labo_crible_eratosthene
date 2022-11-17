@@ -9,8 +9,8 @@
 // Standard C++   : C++ 20
 // -----------------------------------------------------------------------------------------------
 
-#include <iostream>
 #include <vector>
+#include <cmath>    // log
 
 using namespace std;
 
@@ -47,15 +47,12 @@ vector<bool> eratosthene(size_t taille) {
    return tableauCrible;
 }
 
-
-/**
- * @name listeNombresPremiers
- * @brief Créer un liste de nombre premiers à partir d'un tableau criblé passé en paramètre
- * @param tableauCrible vecteur de booléens ou chaque
- * @return un vecteur d'entiers contenant tout les nombres premiers contenus dans le tableauCrible
- */
 vector<int> listeNombresPremiers(const vector<bool>& tableauCrible) {
    vector<int> tableauNbPremier = vector<int>();
+   // Approximation du nombre de nombres premiers
+   // Repris de : https://en.wikipedia.org/wiki/Prime-counting_function
+   const size_t TAILLE = tableauCrible.size() / (int) log(tableauCrible.size());
+   tableauNbPremier.reserve(TAILLE);
 
    for (size_t i = 0; i < tableauCrible.size(); ++i){
       if (tableauCrible.at(i)){

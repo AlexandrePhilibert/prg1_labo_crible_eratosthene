@@ -9,9 +9,9 @@
 // Standard C++   : C++ 20
 // -----------------------------------------------------------------------------------------------
 
-#include <iostream>
-#include <cstdlib>
-#include <limits>
+#include <iostream>      // cin et cout
+#include <cstdlib>       // EXIT_SUCCESS
+#include <limits>        // numeric_limits<>
 #include <string>
 #include <vector>
 #include "saisie.h"
@@ -25,6 +25,9 @@ int main() {
    const string MSG_ERREUR = "/!\\ erreur de saisie ...";
    const int NOMBRE_VALEURS_MIN = 2;
    const int NOMBRE_VALEURS_MAX = 100;
+   /**
+    * Le nombre de colonnes sur la même ligne lors de l'affichage des tableaux
+    */
    const int NOMBRE_COLONNES_TABLEAU = 10;
    const char CHAR_VRAI = 'o';
    const char CHAR_FAUX = 'x';
