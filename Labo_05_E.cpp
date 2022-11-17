@@ -26,13 +26,17 @@ int main() {
    const int NOMBRE_VALEURS_MIN = 2;
    const int NOMBRE_VALEURS_MAX = 100;
    const int NOMBRE_COLONNES_TABLEAU = 10;
+   const char CHAR_VRAI = 'o';
+   const char CHAR_FAUX = 'x';
 
    /**
     * Le nombre de valeurs à considérer pour le calcul des nombres premiers
     */
    int nombreValeurs;
 
-   cout << "Ce programme utilise la méthode du crible d'Ératosthène pour calculer les nombres premiers." << endl;
+   cout << "Ce programme utilise la méthode du crible d'Ératosthène "
+           "pour calculer les nombres premiers."
+        << endl;
 
    nombreValeurs = saisie(
       MSG_SAISIE,
@@ -40,12 +44,13 @@ int main() {
       NOMBRE_VALEURS_MIN,
       NOMBRE_VALEURS_MAX);
 
+   // Calcul du tableau criblé et des nombres premiers
    vector<bool> tableauCrible = eratosthene(nombreValeurs);
    vector<int> nombresPremiers = listeNombresPremiers(tableauCrible);
 
    // Affiche le tableau criblé d'Ératosthène
    cout << "criblage du tableau" << endl;
-   afficher(tableauCrible, 'x', 'o', NOMBRE_COLONNES_TABLEAU);
+   afficher(tableauCrible,CHAR_VRAI,CHAR_FAUX,NOMBRE_COLONNES_TABLEAU);
    cout << endl;
 
    // Affiche la liste des nombres premiers

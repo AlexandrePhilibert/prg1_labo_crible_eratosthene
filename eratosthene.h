@@ -16,7 +16,8 @@
 
 /**
  * @name eratosthene
- * @brief genere le tableau crible d erastothene
+ * @brief créer un vecteur de booléens de 0 -> taille, avec chaque position contenant false
+ *        si le nombre à cette position est un nombre premier.
  * @param taille Le nombre d'éléments à considérer pour le calcul
  * @return vecteur de booléens
  */

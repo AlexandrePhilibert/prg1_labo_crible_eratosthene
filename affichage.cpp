@@ -20,13 +20,6 @@ using namespace std;
  */
 const int LARGEUR_CELLULE = 2;
 
-/**
- * @name afficher
- * @brief Affiche un vecteur sur un nombre de colonnes donné
- * @param vecteur
- * @param nombreColonnes
- * @return NIL
- */
 void afficher(const vector<int>& vecteur, int nombreColonnes) {
    for (size_t i = 0; i < vecteur.size(); ++i) {
      cout << setw(LARGEUR_CELLULE) << vecteur[i] << " ";
@@ -37,15 +30,6 @@ void afficher(const vector<int>& vecteur, int nombreColonnes) {
    }
 }
 
-/**
- * @name afficher
- * @brief
- * @param vecteur
- * @param charVrai
- * @param charFaux
- * @param nombreColonnes
- * @return NIL
- */
 void afficher(const vector<bool>& vecteur, char charVrai, char charFaux, int nombreColonnes) {
    for (size_t i = 0; i < vecteur.size(); ++i) {
       cout << setw(LARGEUR_CELLULE) << (vecteur[i] ? charVrai: charFaux) << " ";
