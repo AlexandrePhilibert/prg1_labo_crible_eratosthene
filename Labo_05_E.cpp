@@ -45,7 +45,7 @@ int main() {
 
    // Affiche le tableau criblé d'Ératosthène
    cout << "criblage du tableau" << endl;
-   afficher(tableauCrible, NOMBRE_COLONNES_TABLEAU);
+   afficher(tableauCrible, 'x', 'o', NOMBRE_COLONNES_TABLEAU);
    cout << endl;
 
    // Affiche la liste des nombres premiers
