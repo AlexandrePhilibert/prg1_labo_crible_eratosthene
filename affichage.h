@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------------------------
 // Fichier        : affichage.h
 // Auteur(s)      : Sonnard Nicolas & Philibert Alexandre
-// Date           : 2022-11-16
+// Date           : 2022-11-20
 // But            : Fonctions responsables pour l'affichage
 // Modifications  : NIL
 // Remarque(s)    :
@@ -9,8 +9,8 @@
 // Standard C++   : C++ 20
 // ----------------------------------------------------------------------------------------------
 
-#ifndef LABO_CRIBLE_ERATOTSTHENE_AFFICHAGE_H
-#define LABO_CRIBLE_ERATOTSTHENE_AFFICHAGE_H
+#ifndef LABO_CRIBLE_ERATOSTHENE_AFFICHAGE_H
+#define LABO_CRIBLE_ERATOSTHENE_AFFICHAGE_H
 
 #include <vector>
 
@@ -54,4 +54,4 @@ void afficher(const std::vector<bool>& vecteur,
               char charFaux = CHAR_FAUX_DEFAUT,
               int nombreColonnes = NOMBRE_COLONNES);
 
-#endif //LABO_CRIBLE_ERATOTSTHENE_AFFICHAGE_H
+#endif //LABO_CRIBLE_ERATOSTHENE_AFFICHAGE_H

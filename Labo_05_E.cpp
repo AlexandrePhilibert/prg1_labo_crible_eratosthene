@@ -1,8 +1,9 @@
 // -----------------------------------------------------------------------------------------------
 // Fichier        : Labo_05_E.cpp
 // Auteur(s)      : Sonnard Nicolas & Philibert Alexandre
-// Date           : 2022-11-16
-// But            :
+// Date           : 2022-11-20
+// But            : Affiche, d'après l'entrée utilisateur, un tableau criblé des nombres premier
+//                  ainsi qu'une liste de nombres premiers selon la méthode d'Ératosthène.
 // Modifications  : NIL
 // Remarque(s)    :
 // Compilateur    : g++ 11.2.0
@@ -29,9 +30,14 @@ int main() {
     * Le nombre de colonnes sur la même ligne lors de l'affichage des tableaux
     */
    const int NOMBRE_COLONNES_TABLEAU = 10;
+   /**
+    * Le caractère a afficher à la place du booléen "true"
+    */
    const char CHAR_VRAI = 'o';
+   /**
+     * Le caractère a afficher à la place du booléen "false"
+     */
    const char CHAR_FAUX = 'x';
-
    /**
     * Le nombre de valeurs à considérer pour le calcul des nombres premiers
     */
@@ -41,6 +47,7 @@ int main() {
         << "pour calculer les nombres premiers."
         << endl;
 
+   // Saisie du nombre de valeurs à considérer pour le crible
    nombreValeurs = saisie(
       MSG_SAISIE,
       MSG_ERREUR,

@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------------------------
 // Fichier        : eratosthene.cpp
 // Auteur(s)      : Sonnard Nicolas & Philibert Alexandre
-// Date           : 2022-11-16
+// Date           : 2022-11-20
 // But            : Fonctions responsables pour le calcul du crible d'Ératosthène.
 // Modifications  : NIL
 // Remarque(s)    :
@@ -48,12 +48,14 @@ vector<bool> eratosthene(size_t taille) {
 }
 
 vector<int> listeNombresPremiers(const vector<bool>& tableauCrible) {
-   vector<int> tableauNbPremier = vector<int>();
    // Approximation du nombre de nombres premiers
    // Repris de : https://en.wikipedia.org/wiki/Prime-counting_function
    const size_t TAILLE = tableauCrible.size() / (int) log(tableauCrible.size());
+
+   vector<int> tableauNbPremier = vector<int>();
    tableauNbPremier.reserve(TAILLE);
 
+   // Ajout des nombres premiers dans le vecteur
    for (size_t i = 0; i < tableauCrible.size(); ++i){
       if (tableauCrible.at(i)){
          tableauNbPremier.push_back((int) i);

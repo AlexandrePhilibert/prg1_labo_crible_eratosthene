@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------------------------
 // Fichier        : saisie.cpp
 // Auteur(s)      : Sonnard Nicolas & Philibert Alexandre
-// Date           : 2022-11-16
+// Date           : 2022-11-20
 // But            : Fonctions responsables de toute la saisie utilisateur, gestion
 // 					  du flux, répétition ou fin du programme.
 // Modifications  : NIL

@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------------------------
 // Fichier        : saisie.h
 // Auteur(s)      : Sonnard Nicolas & Philibert Alexandre
-// Date           : 2022-11-16
+// Date           : 2022-11-20
 // But            : Fonctions responsables de la saisie utilisateur et la
 // 					  vérification de celle-ci, ainsi que la gestion du flux, des
 // 					  éventuelles erreurs et la fin du programme.
@@ -11,8 +11,8 @@
 // Standard C++   : C++ 20
 // -----------------------------------------------------------------------------------------------
 
-#ifndef LABO_CRIBLE_ERATOTSTHENE_SAISIE_H
-#define LABO_CRIBLE_ERATOTSTHENE_SAISIE_H
+#ifndef LABO_CRIBLE_ERATOSTHENE_SAISIE_H
+#define LABO_CRIBLE_ERATOSTHENE_SAISIE_H
 
 #include <string>
 
@@ -34,4 +34,4 @@ int saisie(const std::string& msgInvite,
            int min,
            int max);
 
-#endif //LABO_CRIBLE_ERATOTSTHENE_SAISIE_H
+#endif //LABO_CRIBLE_ERATOSTHENE_SAISIE_H
