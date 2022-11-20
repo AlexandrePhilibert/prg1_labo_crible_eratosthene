@@ -55,7 +55,7 @@ int main() {
       NOMBRE_VALEURS_MAX);
 
    // Calcul du tableau criblé et des nombres premiers
-   vector<bool> tableauCrible = eratosthene(nombreValeurs);
+   vector<bool> tableauCrible = eratosthene((size_t) nombreValeurs);
    vector<int> nombresPremiers = listeNombresPremiers(tableauCrible);
 
    // Affiche le tableau criblé d'Ératosthène

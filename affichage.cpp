@@ -25,7 +25,7 @@ void afficher(const vector<int>& vecteur, int nombreColonnes) {
    for (size_t i = 0; i < vecteur.size(); ++i) {
      cout << setw(LARGEUR_CELLULE) << vecteur[i] << " ";
 
-     if (nombreColonnes != 0 && (i + 1) % nombreColonnes == 0) {
+     if (nombreColonnes != 0 && (i + 1) % (size_t) nombreColonnes == 0) {
         cout << endl;
      }
    }
@@ -35,7 +35,7 @@ void afficher(const vector<bool>& vecteur, char charVrai, char charFaux, int nom
    for (size_t i = 0; i < vecteur.size(); ++i) {
       cout << setw(LARGEUR_CELLULE) << (vecteur[i] ? charVrai: charFaux) << " ";
 
-      if (nombreColonnes != 0 && (i + 1) % nombreColonnes == 0) {
+      if (nombreColonnes != 0 && (i + 1) % (size_t) nombreColonnes == 0) {
          cout << endl;
       }
    }

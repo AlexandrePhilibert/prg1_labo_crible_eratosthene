@@ -50,7 +50,7 @@ vector<bool> eratosthene(size_t taille) {
 vector<int> listeNombresPremiers(const vector<bool>& tableauCrible) {
    // Approximation du nombre de nombres premiers
    // Repris de : https://en.wikipedia.org/wiki/Prime-counting_function
-   const size_t TAILLE = tableauCrible.size() / (int) log(tableauCrible.size());
+   const size_t TAILLE = (size_t) tableauCrible.size() / (size_t) log(tableauCrible.size());
 
    vector<int> tableauNbPremier = vector<int>();
    tableauNbPremier.reserve(TAILLE);
